@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: rgba(255, 255, 255, .2) 1px solid;
+    padding: 1.0rem 0;
+}
+
+.nav-bars {
+    position: fixed;
+    top: 0;
+    right: -25rem;
+    width: 25rem;
+    height: 100vh;
+    background-color: #d7d4ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms linear right;
+}
+
+.nav-bars.active {
+    right: 0;
+}
+
+.nav-items {
+    text-align: center;
+}
+
+.nav-items li {
+    list-style: none;
+    padding: 1rem;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .7);
+}
+
+#close-button {
+    color: #eb648c;
+    font-size: 1.75rem;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+#menu-button {
+    color: #fafafa;
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+.nav-brand {
+    width: 2.5rem;
+}
+
+.hero {
+    height: 80vh;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url('../images/header-bg.jpg') center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    background: url('../images/wave-small.png') center no-repeat;
+    background-size: cover;
+    height: 4.7rem;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 50rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    transform: translateY(40%);
+}
+
+.hero-content h3 {
+    font-size: 1.6rem;
+}
+
+.hero-content h1 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.hero-content p {
+    text-transform: lowercase;
+}
+
+#book-button {
+    background-color: #eb648c;
+    text-decoration: none;
+    color: #d7d4ed;
+    padding: .7rem 1.5rem;
+    border-radius: 2rem;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    transition: 650ms background-color;
+}
+
+#book-button:hover {
+    background-color: #ce587b;
+}
+
+.experience-leading {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .7);
+}
+
+.experience-leading h3 {
+    font-size: 1.4rem;
+}
+
+.experience-leading h1 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+}
+
+.experience-leading p {
+    text-transform: lowercase;
+}
+
+.experience-grid {
+    margin: 4rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.experience-grid-item {
+    padding: 5rem;
+    height: 25rem;
+}
+
+.experience-grid-item.star-gazing {
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url('../images/stars.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.experience-grid-item.hiking {
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url('../images/hiking.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.experience-grid-item.camping {
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url('../images/camping.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.experience-grid-item i {
+    color: #eb648c;
+    font-size: 3rem;
+}
+
+.experience-grid-item h3 {
+    text-transform: uppercase;
+    color: #d7d4ed;
+    margin: 1rem 0;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 1.5rem;
+}
+
+.experience-grid-item p {
+    color: #d7d4ed;
+}
+
+.testimonials {
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%), url('../images/testimonials-bg.jpg') center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 4.7rem;
+    width: 100%;
+    background-image: url('../images/wave-small-reversed.png');
+    background-size: cover;
+}
+
+.testimonial {
+    margin: 4rem 0 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-text {
+    margin-top: 8rem;
+    color: #d7d4ed;
+}
+
+.testimonial-text i {
+    font-size: 4.0rem;
+    color: #eb648c;
+}
+
+.testimonial-customer {
+    margin: 1rem 0;
+    text-align: center;
+    color: #d7d4ed;
+}
+
+.testimonial-customer img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 2px solid #eb648c;
+}
+
+.adventure-leading {
+    margin: 4rem 0;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.adventure-grid-item {
+    color: rgba(0, 0, 0, .7);
+}
+
+footer {
+    margin: 3rem 0 0;
+    background-color: #d7d4ed;
+    padding: 2.5rem 0;
+    text-align: center;
+    color: rgba(0, 0, 0, .7);
+}
+
+@media screen and (min-width:300px) {
+    .hero-content {
+        transform: translateY(50%);
+    }
+}
+
+@media screen and (min-width:470px) {
+    .hero::before {
+        height: 9.4rem;
+        background: url('../images/wave-medium.png') center no-repeat;
+        background-size: cover;
+    }
+
+    .testimonials::before{
+        height: 9.4rem;
+        background: url('../images/wave-medium-reversed.png') center no-repeat;
+        background-size: cover;
+    }
+}
+
+
+@media screen and (min-width:700px) {
+    .nav-brand{
+        width: 3.5rem;
+    }
+
+    .nav-bars{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        transition: initial;
+    }
+
+    .nav-items{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-items li{
+        padding: 0 1rem;
+    }
+    .nav-items li a{
+        display: inline-block;
+        padding: .5rem 0;
+        color: #d7d4ed;
+        position: relative;
+    }
+
+    .nav-items li a.current::before, .nav-items li a::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height:.2rem;
+        background-color: #eb648c;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: ease-in-out 300ms transform;
+    }
+
+    .nav-items li a.current::before, .nav-items li a:hover::before{
+        transform: scaleX(1);
+    }
+    #menu-button, #close-button{
+        display: none;
+    }
+
+    .hero{
+        height: 70vh;
+    }
+
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width:950px) {
+    .hero::before {
+        height: 22.7em;
+        background: url('../images/wave-large.png') center no-repeat;
+        background-size: cover;
+    }
+
+    .testimonials::before{
+        height: 22.7rem;
+        background: url('../images/wave-large-reversed.png') center no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .hero{
+        height: 75vh;
+    }
+}
